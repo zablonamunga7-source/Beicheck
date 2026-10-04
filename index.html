@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BeiCheck Kenya | Compare prices in Kenya</title><meta name="description" content="Compare prices from Kenyan online stores before you buy. Demo version: sample data unless marked Verified."><meta name="theme-color" content="#0f9d58">
+<style>
+:root{--bg:#f7faf8;--card:#fff;--ink:#14231a;--mut:#5d6f64;--line:#e2ebe5;--g:#0f9d58;--gd:#0a7a43;--gl:#e3f5ea;--warn:#fff6dd;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1612;--card:#16221b;--ink:#eaf3ee;--mut:#9bb0a4;--line:#26382d;--gl:#173324;--warn:#2d2a14}}
+:root[data-theme="dark"]{--bg:#0e1612;--card:#16221b;--ink:#eaf3ee;--mut:#9bb0a4;--line:#26382d;--gl:#173324;--warn:#2d2a14}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit;color:inherit}
+.w{max-width:1040px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--card);border-bottom:1px solid var(--line);z-index:5}
+header .w{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:800;font-size:20px;color:var(--g);letter-spacing:-.5px}
+nav a{margin-left:16px;color:var(--mut);font-weight:600;font-size:14px}
+.hero{padding:40px 0 24px}
+h1{font-size:clamp(32px,7vw,56px);line-height:1.05;letter-spacing:-1.5px;margin:0 0 10px;font-weight:800}
+.sub{color:var(--mut);font-size:18px;margin:0 0 24px}
+.sb{display:flex;gap:8px;background:var(--card);border:2px solid var(--g);border-radius:20px;padding:6px;box-shadow:0 8px 30px rgba(15,157,88,.15)}
+.sb input{flex:1;min-width:0;border:0;background:none;padding:12px 14px;font-size:17px;outline:none}
+.btn{background:var(--g);color:#fff;border:0;border-radius:14px;padding:12px 20px;font-weight:700;cursor:pointer;transition:transform .15s,background .15s;display:inline-block;text-align:center}
+.btn:hover{background:var(--gd)}.btn:active{transform:scale(.96)}
+.btn.o{background:none;color:var(--g);border:1.5px solid var(--g)}.btn.r{background:#c62828}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-weight:600;font-size:14px;cursor:pointer}
+.chip:hover,.chip.on{background:var(--gl);border-color:var(--g);color:var(--gd)}
+h2{font-size:20px;margin:28px 0 12px;letter-spacing:-.3px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+.cats{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;text-align:center;font-weight:600;cursor:pointer;transition:.2s}
+.cat:hover{border-color:var(--g);transform:translateY(-2px)}.cat b{display:block;font-size:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;position:relative;cursor:pointer;transition:.2s;display:block}
+.card:hover{border-color:var(--g)}
+.img{height:110px;border-radius:12px;background:var(--gl);display:grid;place-items:center;font-size:52px;overflow:hidden;margin-bottom:10px}
+.img img{width:100%;height:100%;object-fit:cover}
+.nm{font-weight:600;font-size:15px;line-height:1.3}.pr{color:var(--gd);font-weight:800;font-size:18px}
+.mut{color:var(--mut);font-size:13px}
+.tag{font-size:11px;font-weight:700;background:var(--gl);color:var(--gd);border-radius:8px;padding:2px 8px;display:inline-block}
+.tag.s{background:var(--warn);color:#8a6d00}
+.demo{font-size:11px;color:#8a6d00;background:var(--warn);border-radius:8px;padding:2px 8px;display:inline-block}
+.ad{border:2px dashed var(--line);border-radius:18px;padding:18px;text-align:center;color:var(--mut);font-size:13px;margin:20px 0}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.lay{display:grid;gap:16px}
+@media(min-width:800px){.lay{grid-template-columns:240px 1fr}}
+.flt{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;display:grid;gap:10px;align-self:start}
+.flt label{font-size:12px;font-weight:700;color:var(--mut);display:grid;gap:4px}
+input,select{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:9px}
+.res{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;margin-bottom:12px;display:grid;gap:10px;animation:in .35s both}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.rtop{display:flex;gap:12px;align-items:center;cursor:pointer}.rtop .img{width:72px;height:72px;font-size:36px;margin:0;flex:none}
+.stats{display:flex;gap:14px;flex-wrap:wrap;font-size:13px}.stats b{display:block;font-size:15px}
+.off{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.off.best{background:var(--gl);border-radius:12px;padding:10px;border:0;margin:2px 0}
+.logo2{width:34px;height:34px;border-radius:50%;color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.off .i{flex:1;min-width:120px}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:8px;border-bottom:1px solid var(--line);text-align:left}
+.sc{overflow-x:auto}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:24px 0;color:var(--mut);font-size:14px}
+footer a{margin-right:16px;font-weight:600}
+.pn{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:14px}
+.f2{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:600;z-index:9;animation:in .3s}
+:root{--amb:#8a6d00}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--amb:#f0cf5a}}:root[data-theme="dark"]{--amb:#f0cf5a}
+.disc{background:var(--warn);color:var(--amb);border-bottom:2px solid #e0b800;padding:10px 16px;font-size:13px;font-weight:700;text-align:center}
+.st{font-size:11px;font-weight:700;border-radius:8px;padding:2px 8px;display:inline-block;white-space:nowrap}
+.st.s{background:var(--warn);color:var(--amb);border:1px dashed #c9a100}.st.v{background:var(--g);color:#fff}
+.sp{color:var(--amb)!important}.sp::before{content:"SAMPLE ";font-size:10px;font-weight:700;border:1px dashed #c9a100;border-radius:6px;padding:0 4px;margin-right:4px}
+.off.samp{border-left:4px dashed #c9a100;padding-left:8px}
+.btn.s{background:none;color:var(--amb);border:1.5px dashed #c9a100}
+.res{content-visibility:auto;contain-intrinsic-size:auto 280px}
+.m{position:fixed;inset:0;background:rgba(0,0,0,.5);display:grid;place-items:center;z-index:20;padding:16px}.m .pn{max-width:420px;width:100%;margin:0}
+</style></head><body>
+<header><div class="w"><a href="#/" class="logo">BeiCheck 🇰🇪</a><nav><a href="#/search">Browse</a><a href="#/admin">Admin</a></nav></div></header>
+<div class="disc" role="note">Prices shown may be sample/demo data unless marked Verified. Always confirm the final price on the seller's website.</div>
+<main class="w" id="app"></main>
+<footer><div class="w"><a href="#/page/About">About</a><a href="#/page/Contact">Contact</a><a href="#/page/Privacy Policy">Privacy Policy</a><a href="#/page/Terms">Terms</a>
+<p>Prices may change. Always confirm the final price and delivery cost with the seller.</p><p>© BeiCheck Kenya. Some links may be affiliate links.</p></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script>
+/* ===== DATA LAYER: replace these arrays with API/database calls later ===== */
+const DEMO="Sample price — replace with live data.";
+const STORES=[
+ {id:"jumia",name:"Jumia",color:"#f68b1e",url:"https://www.jumia.co.ke",featured:true},
+ {id:"kilimall",name:"Kilimall",color:"#e53935",url:"https://www.kilimall.co.ke"},
+ {id:"carrefour",name:"Carrefour",color:"#1565c0",url:"https://www.carrefour.ke"},
+ {id:"ppk",name:"Phone Place Kenya",color:"#6a1b9a",url:"https://www.phoneplacekenya.com"},
+ {id:"avechi",name:"Avechi",color:"#00897b",url:"https://avechi.co.ke"},
+ {id:"hotpoint",name:"Hotpoint",color:"#d81b60",url:"https://hotpoint.co.ke"}];
+// offer = [storeId, price, condition, deliveryText, freeDelivery]
+/* OFFER SHAPE: one per store listing. verification is "sample" or "verified". Only set "verified" after checking the store's site. */
+const mkOffer=(n,o)=>{const m=/KSh ([\d,]+)/.exec(o[3]);return{store:o[0],productName:n,price:o[1],url:"",image:"",availability:"unknown",condition:o[2],deliveryCost:o[4]?0:m?+m[1].replace(",",""):null,deliveryNote:o[3],updatedAt:"2026-10-01T09:00:00+03:00",verification:"sample"}};
+const P=(id,name,brand,cat,emoji,rating,specs,offers,feat,age)=>({id,name,brand,cat,emoji,image:"",rating,specs,featured:!!feat,added:age,
+ offers:offers.map(o=>mkOffer(name,o)),
+ history:offers[0][1]?[1.08,1.06,1.07,1.04,1.02,1.01,1].map(m=>Math.round(offers.reduce((a,o)=>a+o[1],0)/offers.length*m)):[]});
+let db={stores:STORES,products:[
+ P("redmi-a5","Redmi A5 4GB/128GB","Xiaomi","Phones","📱",4.2,{Display:"6.88\" HD+ 120Hz",RAM:"4GB",Storage:"128GB",Battery:"5200mAh",Camera:"32MP"},[["jumia",12999,"New","2-4 days, KSh 250",0],["kilimall",12450,"New","3-6 days, Free",1],["ppk",13500,"New","Nairobi same day, KSh 300",0],["avechi",12800,"New","1-3 days, KSh 200",0]],1,9),
+ P("galaxy-a16","Samsung Galaxy A16 128GB","Samsung","Phones","📱",4.5,{Display:"6.7\" AMOLED",RAM:"4GB",Storage:"128GB",Battery:"5000mAh"},[["jumia",24999,"New","2-4 days, Free",1],["ppk",23800,"New","Same day Nairobi, KSh 300",0],["hotpoint",25500,"New","2-5 days, Free",1],["carrefour",24500,"New","Pickup or KSh 350",0]],1,8),
+ P("hot50","Infinix Hot 50 8GB/256GB","Infinix","Phones","📱",4.1,{Display:"6.78\" 120Hz",RAM:"8GB",Storage:"256GB",Battery:"5000mAh"},[["jumia",17499,"New","2-4 days, KSh 250",0],["kilimall",16900,"New","3-6 days, Free",1],["avechi",17200,"New","1-3 days, KSh 200",0]],0,7),
+ P("iphone11","iPhone 11 64GB (Refurbished)","Apple","Phones","📱",4.3,{Display:"6.1\" Liquid Retina",Storage:"64GB",Battery:"Tested 85%+"},[["ppk",32500,"Refurbished","Same day Nairobi, KSh 300",0],["jumia",34999,"Refurbished","2-4 days, Free",1],["kilimall",31900,"Refurbished","3-6 days, KSh 400",0]],1,6),
+ P("hp15","HP 15 Core i5 8GB/512GB","HP","Laptops","💻",4.4,{CPU:"Intel Core i5",RAM:"8GB",Storage:"512GB SSD",Screen:"15.6\" FHD"},[["jumia",64999,"New","2-4 days, Free",1],["hotpoint",67500,"New","2-5 days, Free",1],["avechi",62900,"New","1-3 days, KSh 500",0]],1,5),
+ P("ideapad","Lenovo IdeaPad 3 Ryzen 5","Lenovo","Laptops","💻",4.2,{CPU:"Ryzen 5",RAM:"8GB",Storage:"256GB SSD",Screen:"15.6\" FHD"},[["kilimall",54500,"New","3-6 days, Free",1],["jumia",56999,"New","2-4 days, Free",1],["ppk",55800,"Open box","Nairobi, KSh 400",0]],0,4),
+ P("hisense43","Hisense 43\" Smart TV","Hisense","TVs","📺",4.4,{Size:"43\"",Resolution:"Full HD",Smart:"VIDAA",Ports:"2 HDMI"},[["hotpoint",29999,"New","Free Nairobi delivery",1],["carrefour",28500,"New","Free over KSh 5,000",1],["jumia",30999,"New","2-4 days, KSh 500",0]],1,3),
+ P("samsung55","Samsung 55\" 4K UHD TV","Samsung","TVs","📺",4.6,{Size:"55\"",Resolution:"4K",Smart:"Tizen"},[["hotpoint",58999,"New","Free",1],["jumia",57500,"New","2-4 days, Free",1],["carrefour",59900,"New","Free",1]],0,2),
+ P("jbl","JBL Flip 6 Bluetooth Speaker","JBL","Electronics","🔊",4.7,{Battery:"12 hrs",Waterproof:"IP67"},[["jumia",12500,"New","2-4 days, KSh 250",0],["avechi",11900,"New","1-3 days, KSh 200",0],["kilimall",12200,"New","3-6 days, Free",1]],0,1),
+ P("airforce","Nike Air Force 1 (Size 42)","Nike","Shoes","👟",4.3,{Colour:"White",Size:"42"},[["kilimall",8500,"New","3-6 days, KSh 300",0],["jumia",9200,"New","2-4 days, Free",1]],0,10),
+ P("blender","Ramtons 1.5L Blender","Ramtons","Home & Kitchen","🍹",4.0,{Power:"400W",Jar:"1.5L"},[["carrefour",3200,"New","Pickup or KSh 300",0],["hotpoint",3499,"New","Free",1],["jumia",3050,"New","2-4 days, KSh 250",0]],1,11),
+ P("kaftan","Men's Official Shirt (Slim)","Generic","Fashion","👔",3.9,{Fabric:"Cotton"},[["kilimall",1400,"New","3-6 days, KSh 200",0],["jumia",1650,"New","2-4 days, KSh 250",0]],0,12)]};
+const CATS=[["Phones","📱"],["Laptops","💻"],["TVs","📺"],["Electronics","🔊"],["Shoes","👟"],["Fashion","👔"],["Home & Kitchen","🍹"]];
+const POP=["Redmi A5","Samsung Galaxy A16","HP 15 laptop","Hisense TV","iPhone 11","JBL speaker"];
+/* ===== HELPERS ===== */
+const $=s=>document.querySelector(s),kes=n=>"KSh "+Math.round(n).toLocaleString("en-KE");
+const store=id=>db.stores.find(s=>s.id===id)||{name:id,color:"#777",url:""};
+const stat=p=>{const a=p.offers.map(o=>+o.price).filter(Boolean);return{lo:Math.min(...a),hi:Math.max(...a),avg:a.reduce((x,y)=>x+y,0)/(a.length||1),n:a.length}};
+const best=p=>p.offers.reduce((b,o)=>!b||o.price<b.price?o:b,null);
+const img=p=>`<div class="img">${p.image?`<img src="${p.image}" alt="">`:p.emoji}</div>`;
+const logo=s=>`<span class="logo2" style="background:${s.color}">${s.name[0]}</span>`;
+const toast=m=>{const t=document.createElement("div");t.className="toast";t.textContent=m;document.body.append(t);setTimeout(()=>t.remove(),2200)};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const adSlot=t=>`<div class="ad">${t}</div>`;
+const isV=o=>o.verification==="verified";
+const fdate=t=>{try{return new Date(t).toLocaleDateString("en-KE",{dateStyle:"medium"})}catch(e){return "unknown"}};
+const lu=o=>isV(o)?"Last updated "+fdate(o.updatedAt):"Not a live price · sample entered "+fdate(o.updatedAt);
+const badge=o=>isV(o)?`<span class="st v">✔ Verified price</span>`:`<span class="st s">Sample data</span>`;
+const pbadge=p=>{const v=p.offers.filter(isV).length;return v&&v==p.offers.length?`<span class="st v">✔ Verified</span>`:v?`<span class="st s">Partly verified</span>`:`<span class="st s">Sample data</span>`};
+const pt=o=>`<b class="${isV(o)?"":"sp"}">${kes(o.price)}</b>`;
+const av=o=>({in_stock:"In stock",out_of_stock:"Out of stock"}[o.availability]||"Availability not confirmed");
+const dtxt=o=>{const n=(o.deliveryNote||"").split(",")[0];return(o.deliveryCost===0?"Free delivery":o.deliveryCost>0?"Delivery "+kes(o.deliveryCost):"Delivery cost unknown")+(n&&!/^free/i.test(n)?" · "+n:"")};
+function seo(t,d,ld,idx=true){document.title=t;let m=$('meta[name=description]');m.content=d;let r=$('meta[name=robots]');if(!r){r=document.createElement("meta");r.name="robots";document.head.append(r)}r.content=idx?"index,follow":"noindex,follow";let x=$("#ld");if(x)x.remove();if(ld){x=document.createElement("script");x.id="ld";x.type="application/ld+json";x.textContent=JSON.stringify(ld);document.head.append(x)}}
+function prodSeo(p){const v=p.offers.filter(isV),n=p.offers.map(o=>store(o.store).name).join(", "),pr=v.map(o=>o.price);
+ seo(`${p.name} price in Kenya | BeiCheck Kenya`,v.length?`Compare ${p.name} prices in Kenya at ${n}. Lowest verified price: KSh ${Math.min(...pr).toLocaleString("en-KE")}.`:`Compare ${p.name} across ${n} in Kenya. Prices are sample data until verified.`,
+ v.length?{"@context":"https://schema.org","@type":"Product",name:p.name,brand:{"@type":"Brand",name:p.brand},category:p.cat,offers:{"@type":"AggregateOffer",priceCurrency:"KES",lowPrice:Math.min(...pr),highPrice:Math.max(...pr),offerCount:v.length}}:null,v.length>0)}
+function modal(h){closeM();const m=document.createElement("div");m.className="m";m.id="mod";m.innerHTML=`<div class="pn">${h}</div>`;m.onclick=e=>{if(e.target===m)closeM()};document.body.append(m)}
+function sendReport(id){const r={product:id,store:$("#rs").value,seen:+$("#rp").value||null,note:$("#rn").value};reports.push(r);Cloud.report(r)}
+function closeM(){$("#mod")?.remove()}
+function reportM(id){const p=db.products.find(x=>x.id===id);modal(`<h2 style="margin-top:0">Report incorrect price</h2><p class="mut">${SB?"Reports are sent to the BeiCheck team.":"Demo: reports stay in this browser session only."}</p><select id="rs" style="width:100%;margin-bottom:8px">${p.offers.map(o=>`<option value="${o.store}">${store(o.store).name} — ${kes(o.price)}</option>`).join("")}</select><input id="rp" type="number" inputmode="numeric" placeholder="Price you saw on the store (KSh)" style="width:100%;margin-bottom:8px"><input id="rn" placeholder="Note (optional)" style="width:100%"><br><br><div class="row"><button class="btn" onclick="sendReport('${id}');closeM();toast('Report sent. Thank you!')">Send report</button><button class="btn o" onclick="closeM()">Cancel</button></div>`)}
+function alertM(id){modal(`<span class="st s">Coming soon</span><h2 style="margin:6px 0 0">Price drop alert</h2><p class="mut">Alerts are not active yet. No notification will be sent. This shows how the feature will work.</p><input id="at" type="number" inputmode="numeric" placeholder="Alert me below (KSh)" style="width:100%"><br><br><div class="row"><button class="btn" onclick="alerts.push({product:'${id}',target:+$('#at').value});closeM();toast('Saved in demo only. No alerts sent.')">Save request</button><button class="btn o" onclick="closeM()">Close</button></div>`)}
+function pcard(p){const s=stat(p);return `<a class="card" href="#/p/${p.id}">${p.featured?'<span class="tag s" style="position:absolute;top:8px;left:8px;z-index:1">Featured</span>':""}${img(p)}<div class="nm">${esc(p.name)}</div><div class="pr ${p.offers.every(isV)?"":"sp"}">from ${kes(s.lo)}</div><div class="mut">${s.n} stores · ★ ${p.rating}</div>${pbadge(p)}</a>`}
+/* ===== ROUTER ===== */
+let F={q:"",cat:"",max:"",store:"",brand:"",cond:"",rating:0,free:false,sort:"cheap"};
+function go(){const h=location.hash.slice(2).split("/"),r=h[0]||"home";window.scrollTo(0,0);seo("BeiCheck Kenya | Compare prices in Kenya before you buy","Search phones, laptops, TVs and more and compare prices across Kenyan online stores. Demo version: sample data unless marked Verified.");closeM();
+ ({home,search,p:product,admin,page})[r]?.(decodeURIComponent(h.slice(1).join("/")))}
+addEventListener("hashchange",go);
+function doSearch(q,cat){F={...F,q:q||"",cat:cat||"",max:"",store:"",brand:"",cond:"",rating:0,free:false};location.hash="#/search";if(location.hash==="#/search")go()}
+/* ===== PAGES ===== */
+function home(){const feat=db.products.filter(p=>p.featured);
+$("#app").innerHTML=`<section class="hero"><h1>Find the best price in Kenya.</h1><p class="sub">Compare prices before you buy.</p>
+<form class="sb" onsubmit="doSearch(this.q.value);return false"><input name="q" placeholder="Search phones, laptops, TVs, shoes..." autocomplete="off" aria-label="Search"><button class="btn">Search</button></form></section>
+<h2>Popular categories</h2><div class="grid cats">${CATS.map(c=>`<div class="cat" onclick="doSearch('','${c[0]}')"><b>${c[1]}</b>${c[0]}</div>`).join("")}</div>
+<h2>Popular searches</h2><div class="chips">${POP.map(x=>`<span class="chip" onclick="doSearch('${x}')">${x}</span>`).join("")}</div>
+${adSlot("Advertisement space · Your ad here")}
+<h2>Today's deals <span class="st s">Sample data</span></h2><p class="mut">${DEMO}</p><br><div class="grid">${feat.map(pcard).join("")}</div>
+<h2>Featured stores</h2><div class="chips">${db.stores.map(s=>`<span class="chip" onclick="F.store='${s.id}';doSearch('')" style="display:flex;gap:6px;align-items:center">${logo(s)}${s.name}</span>`).join("")}</div>
+${adSlot("Sponsored product slot · Affiliate partners")}`}
+function match(p){const s=stat(p),q=F.q.toLowerCase();
+ if(q&&!(p.name+" "+p.brand+" "+p.cat).toLowerCase().includes(q))return false;
+ if(F.cat&&p.cat!==F.cat)return false;if(F.brand&&p.brand!==F.brand)return false;if(F.rating&&p.rating<F.rating)return false;
+ if(F.max&&s.lo>+F.max)return false;
+ if(F.store&&!p.offers.some(o=>o.store===F.store))return false;
+ if(F.cond&&!p.offers.some(o=>o.condition===F.cond))return false;
+ if(F.free&&!p.offers.some(o=>o.deliveryCost===0))return false;if(F.ver&&!p.offers.some(isV))return false;return true}
+function search(){const brands=[...new Set(db.products.map(p=>p.brand))],conds=[...new Set(db.products.flatMap(p=>p.offers.map(o=>o.condition)))];
+$("#app").innerHTML=`<div style="padding:16px 0"><form class="sb" onsubmit="F.q=this.q.value;F.cat='';res();return false"><input name="q" value="${esc(F.q)}" placeholder="Search phones, laptops, TVs, shoes..."><button class="btn">Search</button></form></div>
+<div class="chips" style="margin-bottom:12px">${CATS.map(c=>`<span class="chip ${F.cat===c[0]?"on":""}" onclick="F.cat=F.cat==='${c[0]}'?'':'${c[0]}';search()">${c[0]}</span>`).join("")}</div>
+<div class="lay"><div class="flt"><label>Sort by<select onchange="F.sort=this.value;res()">${[["cheap","Cheapest first"],["exp","Most expensive"],["rate","Highest rated"],["new","Newest"]].map(o=>`<option value="${o[0]}" ${F.sort===o[0]?"selected":""}>${o[1]}</option>`).join("")}</select></label>
+<label>Max price (KSh)<input type="number" inputmode="numeric" value="${F.max}" placeholder="e.g. 20000" onchange="F.max=this.value;res()"></label>
+<label>Store<select onchange="F.store=this.value;res()"><option value="">All stores</option>${db.stores.map(s=>`<option value="${s.id}" ${F.store===s.id?"selected":""}>${s.name}</option>`).join("")}</select></label>
+<label>Brand<select onchange="F.brand=this.value;res()"><option value="">All brands</option>${brands.map(b=>`<option ${F.brand===b?"selected":""}>${b}</option>`).join("")}</select></label>
+<label>Condition<select onchange="F.cond=this.value;res()"><option value="">Any</option>${conds.map(b=>`<option ${F.cond===b?"selected":""}>${b}</option>`).join("")}</select></label>
+<label>Rating<select onchange="F.rating=+this.value;res()">${[0,3,4,4.5].map(r=>`<option value="${r}" ${F.rating===r?"selected":""}>${r?r+"★ & up":"Any"}</option>`).join("")}</select></label>
+<label style="display:flex;gap:8px;align-items:center"><input type="checkbox" ${F.free?"checked":""} onchange="F.free=this.checked;res()" style="width:auto">Free delivery available</label>
+<label style="display:flex;gap:8px;align-items:center"><input type="checkbox" ${F.ver?"checked":""} onchange="F.ver=this.checked;res()" style="width:auto">Verified prices only</label><button class="btn o" onclick="F={...F,q:'',cat:'',max:'',store:'',brand:'',cond:'',rating:0,free:false,ver:false};search()">Clear filters</button></div>
+<div id="res"></div></div>`;res()}
+function res(){let L=db.products.filter(match);const k={cheap:p=>stat(p).lo,exp:p=>-stat(p).hi,rate:p=>-p.rating,new:p=>p.added}[F.sort];L.sort((a,b)=>k(a)-k(b));
+$("#res").innerHTML=`<p class="mut">${L.length} product${L.length==1?"":"s"} found · ${DEMO}</p>`+(L.length?L.slice(0,F.lim||10).map((p,i)=>{const sc=p.offers.every(isV)?"":"sp",s=stat(p),b=best(p),o=p.offers.slice().sort((x,y)=>x.price-y.price).slice(0,3);
+return (i==2?adSlot("Sponsored product · Advertisement"):"")+`<div class="res"><div class="rtop" onclick="location.hash='#/p/${p.id}'">${img(p)}<div><div class="nm">${esc(p.name)}</div><div class="mut">★ ${p.rating} · ${p.brand}</div>${pbadge(p)}</div></div>
+<div class="stats"><span>Lowest<b class="${sc}">${kes(s.lo)}</b></span><span>Highest<b class="${sc}">${kes(s.hi)}</b></span><span>Average<b class="${sc}">${kes(s.avg)}</b></span></div>
+${o.map(x=>offer(x,x===b)).join("")}<div class="mut">${lu(b)}</div></div>`}).join(""):`<div class="pn">No products match. Try a different word or clear the filters.</div>`)+(L.length>(F.lim||10)?`<button class="btn o" style="width:100%" onclick="F.lim=(F.lim||10)+10;res()">Show more</button>`:"")}
+function offer(o,isBest){const s=store(o.store),v=isV(o);return `<div class="off ${isBest?"best":""} ${v?"":"samp"}">${logo(s)}<div class="i"><b>${s.name}</b> ${badge(o)} ${isBest?`<span class="tag">${v?"Best verified price":"Lowest sample price"}</span>`:""}<div class="mut">${o.condition} · ${av(o)} · ${dtxt(o)}</div><div class="mut">${lu(o)}</div></div>${pt(o)}<a class="btn ${v?(isBest?"":"o"):"s"}" target="_blank" rel="noopener sponsored" href="${o.url||s.url}">${v?"View Deal":"Visit store"}</a></div>`}
+function product(id){const p=db.products.find(x=>x.id===id);if(!p)return home();prodSeo(p);const s=stat(p),b=best(p),H=p.history,mx=Math.max(...H),mn=Math.min(...H),W=320,Ht=110;
+const pts=H.map((v,i)=>`${10+i*(W-20)/(H.length-1)},${Ht-10-(v-mn)/((mx-mn)||1)*(Ht-30)}`).join(" ");
+$("#app").innerHTML=`<p><a href="#/search" class="mut">‹ Back to results</a></p><div class="row" style="align-items:center"><div style="width:140px">${img(p)}</div><div style="flex:1;min-width:200px"><h1 style="font-size:28px">${esc(p.name)}</h1><div class="mut">★ ${p.rating} · ${p.brand} · ${p.cat}</div><div class="pr" style="font-size:26px">${isV(b)?"Best verified price":"Lowest sample price"}: ${kes(s.lo)}</div>${pbadge(p)} <div class="mut">${lu(b)}</div><div class="demo">${DEMO}</div></div></div>
+<h2>Price comparison</h2><div class="pn">${p.offers.slice().sort((x,y)=>x.price-y.price).map(x=>offer(x,x===b).replace("View Deal","Visit Store")).join("")}<p class="mut">${lu(b)}. Always confirm the final price and delivery cost with the seller.</p></div>
+<div class="row"><button class="btn o" onclick="reportM('${p.id}')">⚑ Report incorrect price</button><button class="btn o" onclick="alertM('${p.id}')">🔔 Price drop alert</button></div>${adSlot("Sponsored product · Affiliate link space")}
+<h2>Price history</h2><div class="pn"><svg viewBox="0 0 ${W} ${Ht}" width="100%" role="img" aria-label="Price history"><polyline points="${pts}" fill="none" stroke="#0f9d58" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${H.map((v,i)=>`<circle cx="${10+i*(W-20)/(H.length-1)}" cy="${Ht-10-(v-mn)/((mx-mn)||1)*(Ht-30)}" r="3" fill="#0f9d58"/>`).join("")}</svg><div class="mut"><b>Sample history</b>, not real past prices · ${kes(mn)} to ${kes(mx)}</div></div>
+<h2>Specifications</h2><div class="pn sc"><table>${Object.entries(p.specs).map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}</table></div>
+<h2>Stores</h2><div class="pn sc"><table>${p.offers.map(o=>`<tr><td>${store(o.store).name}</td><td>${dtxt(o)}</td><td>${o.condition}</td></tr>`).join("")}</table></div>`}
+const PAGES={
+About:`<p><b>BeiCheck Kenya</b> helps Kenyan shoppers compare the price of the same product across online stores, so you can check before you buy.</p><h2>How it works</h2><p>You search for a product. We list the offers we know about, with price, condition, delivery cost and the date we last checked. Then you visit the store to buy.</p><h2>Honest data</h2><p>This is an early demo. Prices marked <b>Sample data</b> are made-up examples and are not real. Only prices marked <b>Verified price</b> were checked against the store's site, and each one shows when. We do not sell products and the store sets the final price.</p><h2>How we may earn</h2><p>Some links may become affiliate links, and stores may pay for featured spots. Paid placements will always be labelled and will never change a verified price.</p>`,
+Contact:`<p>Questions, price corrections, or stores that want to be listed? Email us at <b>hello@your-domain.co.ke</b> <span class="st s">replace with your real email</span>.</p><p>Spotted a wrong price? Use <b>Report incorrect price</b> on any product page.</p>`,
+"Privacy Policy":`<p class="mut">Template for the demo. Have it reviewed against Kenya's Data Protection Act, 2019 before launch.</p><h2>What we collect</h2><p>In this demo version, nothing is sent to a server. Price reports and alert requests stay in your browser session only. Admin demo login details are not real accounts.</p><h2>When live</h2><p>If we add accounts, alerts or analytics, we will list exactly what we collect, why, and how to ask us to delete it. We will not sell your personal data.</p><h2>Links to stores</h2><p>Store sites have their own privacy policies. Some links may be affiliate links.</p>`,
+Terms:`<p class="mut">Template for the demo. Get it reviewed before launch.</p><p>BeiCheck Kenya is a price information service, not a seller. Prices shown may be sample/demo data unless marked Verified. Prices, stock and delivery costs can change at any time, so always confirm the final price on the seller's website. We are not responsible for purchases made on third-party sites.</p>`};
+function page(n){seo(n+" | BeiCheck Kenya",n==="About"?"BeiCheck Kenya compares prices across Kenyan online stores so you can check before you buy.":n+" for BeiCheck Kenya.");$("#app").innerHTML=`<article class="pn" style="margin-top:24px;line-height:1.7"><h1 style="font-size:32px">${esc(n)}</h1>${PAGES[n]||"<p>Page not found.</p>"}</article>`}
+/* ===== ADMIN (demo gate only: real security needs a backend) ===== */
+/* ===== AUTH: the app only calls Auth.*. Swap this object for Supabase/Firebase/Clerk later. ===== */
+/* ===== SUPABASE: paste your two values. Leave as-is to keep demo mode. ===== */
+const SB=SUPABASE_URL.startsWith("http")&&window.supabase?supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
+const Auth={user:null,
+ async check(u){const{data}=await SB.from("admins").select("user_id").eq("user_id",u.id).maybeSingle();this.user=data?{email:u.email,role:"admin"}:null},
+ async signIn(e,p){if(SB){const{data,error}=await SB.auth.signInWithPassword({email:e,password:p});if(error)return{ok:false,error:"Wrong email or password"};await this.check(data.user);return this.user?{ok:true}:{ok:false,error:"Not an admin account"}}
+  if(e==="demo@beicheck.test"&&p==="demo-only"){this.user={email:e,role:"admin"};return{ok:true}}return{ok:false,error:"Wrong email or password"}},
+ async signOut(){if(SB)await SB.auth.signOut();this.user=null},isAdmin(){return this.user?.role==="admin"}};
+const fromRow=r=>({store:r.store,productName:r.product_name,price:r.price,url:r.url||"",image:r.image||"",availability:r.availability,condition:r.condition,deliveryCost:r.delivery_cost,deliveryNote:r.delivery_note||"",updatedAt:r.updated_at,verification:r.verification});
+const toRow=(pid,o)=>({product_id:pid,store:o.store,product_name:o.productName,price:o.price,url:o.url,image:o.image,availability:o.availability,condition:o.condition,delivery_cost:o.deliveryCost,delivery_note:o.deliveryNote,updated_at:o.updatedAt,verification:o.verification});
+/* Cloud = every database call lives here. All methods do nothing in demo mode. */
+const Cloud={
+ async boot(){if(!SB)return false;try{const{data:{session}}=await SB.auth.getSession();if(session)await Auth.check(session.user);
+  const[a,b,c]=await Promise.all([SB.from("stores").select("*"),SB.from("products").select("*"),SB.from("offers").select("*")]);if(a.error||b.error||c.error)throw 0;
+  db.stores=a.data;db.products=b.data.map(x=>({...x,image:x.image||"",rating:+x.rating,specs:x.specs||{},history:x.history||[],offers:c.data.filter(r=>r.product_id===x.id).map(fromRow)}));return true}catch(e){toast("Could not load the database");return false}},
+ async saveProduct(p){if(!SB)return true;const{error}=await SB.from("products").upsert({id:p.id,name:p.name,brand:p.brand,cat:p.cat,emoji:p.emoji,image:p.image,rating:p.rating,specs:p.specs,featured:p.featured,added:p.added,history:p.history});if(error)return false;
+  await SB.from("offers").delete().eq("product_id",p.id);return !(await SB.from("offers").insert(p.offers.map(o=>toRow(p.id,o)))).error},
+ async del(id){SB&&await SB.from("products").delete().eq("id",id)},
+ async feat(id,v){SB&&await SB.from("products").update({featured:v}).eq("id",id)},
+ async store(x){SB&&await SB.from("stores").insert({id:x.id,name:x.name,color:x.color,url:x.url})},
+ async report(r){SB&&await SB.from("reports").insert(r)}};
+let ed=null,reports=[],alerts=[];
+async function doLogin(f){const r=await Auth.signIn(f.e.value,f.p.value);r.ok?admin():toast(r.error)}
+function admin(){seo("Admin | BeiCheck Kenya","Admin area",null,false);if(!Auth.isAdmin()){$("#app").innerHTML=`<div class="pn" style="margin-top:30px;max-width:380px">${SB?`<h2>Admin sign in</h2>`:`<span class="st s">TEMPORARY DEMO LOGIN</span><h2>Admin sign in</h2><p class="mut">Not secure: these details are visible in the page code. Email <b>demo@beicheck.test</b>, password <b>demo-only</b>.</p>`}<form onsubmit="doLogin(this);return false"><input name="e" type="email" placeholder="Email" style="width:100%;margin-bottom:8px"><input name="p" type="password" placeholder="Password" style="width:100%;margin-bottom:10px"><button class="btn" style="width:100%">Sign in</button></form></div>`;return}
+$("#app").innerHTML=`<div class="row" style="justify-content:space-between;align-items:center"><h2>Admin dashboard</h2><span class="st ${SB?"v":"s"}">${SB?"":"DEMO LOGIN · "}${Auth.user.email}</span><button class="btn o" onclick="Auth.signOut().then(admin)">Sign out</button></div><p class="mut">Changes live in memory only and reset on refresh in this first version.</p>
+<div class="row"><button class="btn" onclick="ed=newP();admin()">+ Add product</button><button class="btn o" onclick="addStore()">+ Add store</button></div><br>
+${ed?editor():""}<div class="pn"><b>Price reports (${reports.length})</b>${reports.map(r=>`<div class="mut">${r.product} · ${store(r.store).name} · saw ${r.seen?kes(r.seen):"?"} · ${esc(r.note||"")}</div>`).join("")}<br><b>Alert requests (${alerts.length})</b> <span class="mut">not active, nothing is sent</span></div>
+${db.products.map(p=>`<div class="pn"><div class="row" style="align-items:center"><div style="width:56px">${img(p)}</div><div style="flex:1;min-width:150px"><b>${esc(p.name)}</b><div class="mut">${kes(stat(p).lo)} · ${p.offers.length} offers</div></div>
+<label class="mut"><input type="checkbox" style="width:auto" ${p.featured?"checked":""} onchange="feat('${p.id}',this.checked)"> Featured</label>
+<button class="btn o" onclick="ed=JSON.parse(JSON.stringify(db.products.find(x=>x.id==='${p.id}')));admin();scrollTo(0,0)">Edit</button><button class="btn r" onclick="del('${p.id}')">Delete</button></div></div>`).join("")}`}
+const blankO=()=>({store:db.stores[0].id,productName:"",price:0,url:"",image:"",availability:"unknown",condition:"New",deliveryCost:null,deliveryNote:"",updatedAt:"",verification:"sample"});
+const newP=()=>({id:"new-"+Date.now(),name:"",brand:"",cat:"Phones",emoji:"📦",image:"",rating:4,specs:{},featured:false,added:99,history:[],isNew:true,offers:[blankO()]});
+function editor(){const I=(i,k,ph,t="")=>`<input ${t} placeholder="${ph}" value="${esc(ed.offers[i][k]??"")}" oninput="ed.offers[${i}].${k}=${t?"this.value===''?null:+this.value":"this.value"}">`;
+const rows=ed.offers.map((o,i)=>`<div class="pn" style="padding:10px"><div class="f2"><select onchange="ed.offers[${i}].store=this.value">${db.stores.map(s=>`<option value="${s.id}" ${o.store===s.id?"selected":""}>${s.name}</option>`).join("")}</select>${I(i,"productName","Product name at store")}${I(i,"price","Price KSh",'type="number" inputmode="numeric"')}${I(i,"url","Product URL (https://...)")}${I(i,"image","Image URL (optional)")}
+<select onchange="ed.offers[${i}].availability=this.value">${[["in_stock","In stock"],["out_of_stock","Out of stock"],["unknown","Not confirmed"]].map(a=>`<option value="${a[0]}" ${o.availability===a[0]?"selected":""}>${a[1]}</option>`).join("")}</select>${I(i,"condition","Condition")}${I(i,"deliveryCost","Delivery KSh (0 = free)",'type="number"')}${I(i,"deliveryNote","Delivery note")}
+<select onchange="ed.offers[${i}].verification=this.value"><option value="sample" ${isV(o)?"":"selected"}>Sample data</option><option value="verified" ${isV(o)?"selected":""}>Verified price</option></select><button class="btn r" onclick="ed.offers.splice(${i},1);admin()">Remove</button></div></div>`).join("");
+return `<div class="pn" style="border-color:var(--g)"><h2 style="margin-top:0">${ed.isNew?"Add":"Edit"} product</h2><div class="f2">
+<input placeholder="Product name" value="${esc(ed.name)}" oninput="ed.name=this.value"><input placeholder="Brand" value="${esc(ed.brand)}" oninput="ed.brand=this.value">
+<select onchange="ed.cat=this.value">${CATS.map(c=>`<option ${ed.cat===c[0]?"selected":""}>${c[0]}</option>`).join("")}</select>
+<input placeholder="Emoji" value="${ed.emoji}" oninput="ed.emoji=this.value"><input type="number" step=".1" max="5" placeholder="Rating" value="${ed.rating}" oninput="ed.rating=+this.value"></div>
+<label class="mut">Product image<br><input type="file" accept="image/*" onchange="upload(this)"></label>
+<h2>Offers & prices</h2><p class="mut">Choose "Verified price" only after checking the price on the store's own page. Verified offers need a product URL.</p>${rows}
+<div class="row"><button class="btn o" onclick="ed.offers.push(blankO());admin()">+ Add offer</button><button class="btn" onclick="save()">Save product</button><button class="btn o" onclick="ed=null;admin()">Cancel</button></div></div>`}
+function upload(i){const f=i.files[0];if(!f)return;const im=new Image();im.onload=()=>{const k=Math.min(1,600/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);ed.image=c.toDataURL("image/jpeg",.75);toast("Image added")};im.src=URL.createObjectURL(f)}
+function save(){if(!ed.name.trim()||!ed.offers.length)return toast("Add a name and at least one offer");
+ if(ed.offers.some(o=>isV(o)&&!/^https?:\/\//.test(o.url||"")))return toast("Verified prices need a product URL");
+ const t=new Date().toISOString(),m=Math.min(...ed.offers.map(o=>o.price));ed.offers.forEach(o=>{o.updatedAt=t;o.productName=o.productName||ed.name});
+ ed.history=(ed.history.length?ed.history.slice(1):Array(6).fill(m)).concat(m);
+ if(ed.isNew){ed.id=ed.name.toLowerCase().replace(/[^a-z0-9]+/g,"-")+"-"+Date.now()%1000;delete ed.isNew;db.products.unshift(ed)}else db.products=db.products.map(p=>p.id===ed.id?ed:p);
+ Cloud.saveProduct(ed).then(ok=>{ed=null;toast(ok?"Saved":"Database error: saved on this screen only");admin()})}
+function del(id){if(confirm("Delete this product?")){db.products=db.products.filter(p=>p.id!==id);Cloud.del(id);admin()}}
+function feat(id,v){Cloud.feat(id,v);db.products.find(p=>p.id===id).featured=v;toast(v?"Marked featured":"Removed from featured")}
+function addStore(){const n=prompt("Store name?");if(!n)return;db.stores.push({id:n.toLowerCase().replace(/\W/g,""),name:n,color:"#"+Math.floor(Math.random()*0x777777+0x333333).toString(16),url:prompt("Store website (https://...)")||""});Cloud.store(db.stores[db.stores.length-1]);toast("Store added");admin()}
+go();Cloud.boot().then(ok=>ok&&go());
+</script></body></html>
